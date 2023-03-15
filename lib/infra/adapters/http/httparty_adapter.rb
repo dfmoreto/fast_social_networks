@@ -8,6 +8,8 @@ class HttpartyAdapter
     response = self.class.get(url, headers:, query:)
     raise_error(url, response) if response.code >= 400
     response.parsed_response
+  rescue JSON::ParserError
+    raise HTTPError.new(url, response.code, 'Invalid JSON response')
   end
 
   private
