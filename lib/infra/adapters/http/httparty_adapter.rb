@@ -10,6 +10,8 @@ class HttpartyAdapter
     response.parsed_response
   rescue JSON::ParserError
     raise HTTPError.new(url, response.code, 'Invalid JSON response')
+  rescue SocketError
+    raise HTTPError.new(url, 502, 'Error on trying to reach endpoint')
   end
 
   private
