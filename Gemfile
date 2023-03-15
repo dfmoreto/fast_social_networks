@@ -8,5 +8,6 @@ gem 'httparty', '0.21.0'
 gem 'roda', '~> 3.66'
 
 group :development, :test do
+  gem 'debug', '~> 1.7.1'
   gem 'rspec', '~> 3.12'
 end

@@ -22,6 +22,9 @@ GEM
     builder (3.2.4)
     concurrent-ruby (1.2.0)
     crass (1.0.6)
+    debug (1.7.1)
+      irb (>= 1.5.0)
+      reline (>= 0.3.1)
     diff-lcs (1.5.0)
     dotenv (2.8.1)
     dotenv-rails (2.8.1)
@@ -33,6 +36,9 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
+    io-console (0.6.0)
+    irb (1.6.2)
+      reline (>= 0.3.0)
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -59,6 +65,8 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
+    reline (0.3.2)
+      io-console (~> 0.5)
     roda (3.66.0)
       rack
     rspec (3.12.0)
@@ -83,6 +91,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  debug (~> 1.7.1)
   dotenv-rails (~> 2.8)
   httparty (= 0.21.0)
   roda (~> 3.66)
