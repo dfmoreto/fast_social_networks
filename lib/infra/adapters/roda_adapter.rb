@@ -9,6 +9,7 @@ class RodaAdapter < Roda
 
   def self.on(method, url, &block)
     @endpoints ||= []
+    url = url[1..] if url[0] == '/'
     @endpoints << { method:, url:, block: }
   end
 
